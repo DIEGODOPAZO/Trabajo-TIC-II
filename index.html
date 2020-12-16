@@ -5,6 +5,24 @@
    </head>
    
 
+   <script> 
+var img = {src:"", id:""};
+
+function cambiar(imagen) {
+    if(img.src=="" && img.id==""){
+        img.src=imagen.src;
+        img.id=imagen.id;
+    }
+    else{ 
+        var aux = imagen.src;
+
+        document.getElementById(imagen.id).src = img.src;
+        document.getElementById(img.id).src = aux;
+
+        img.src = ""; img.id="";
+    }
+} 
+</script>
   
         
  <body>
@@ -13,7 +31,7 @@
 <img id="myImage2" src="https://raw.githubusercontent.com/DIEGODOPAZO/Trabajo-TIC-II/gh-pages/imagenes/zoro.jpg" alt="zoro" onclick="cambiar(this)" name="canvi" heigth = "250">  
 
 
-<script src = "https://raw.githubusercontent.com/DIEGODOPAZO/Trabajo-TIC-II/gh-pages/scripts/cambioImagen.js"></script>
+
   </body>
 
 </html
