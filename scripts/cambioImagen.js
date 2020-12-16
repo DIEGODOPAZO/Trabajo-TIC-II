@@ -1,8 +1,8 @@
-<script> 
-var img = {src:"https://raw.githubusercontent.com/DIEGODOPAZO/Trabajo-TIC-II/gh-pages/imagenes/monkeyDluffy.jpg", id:"imagen1"};
+   <script> 
+var img = {src:"", id:""};
 
 function cambiar(imagen) {
-    if(img.src=="https://raw.githubusercontent.com/DIEGODOPAZO/Trabajo-TIC-II/gh-pages/imagenes/monkeyDluffy.jpg" && img.id=="imagen1"){
+    if(img.src=="" && img.id==""){
         img.src=imagen.src;
         img.id=imagen.id;
     }
@@ -12,8 +12,7 @@ function cambiar(imagen) {
         document.getElementById(imagen.id).src = img.src;
         document.getElementById(img.id).src = aux;
 
-        img.src = "https://raw.githubusercontent.com/DIEGODOPAZO/Trabajo-TIC-II/gh-pages/imagenes/zoro.jpg"; img.id="imagen2";
+        img.src = ""; img.id="";
     }
 } 
 </script>
-
