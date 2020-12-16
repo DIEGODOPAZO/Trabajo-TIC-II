@@ -4,12 +4,33 @@
     <title> One piece </title>
    </head>
    
-  <body> 
-      <p>
-    <img id = "imagen1" src = "https://raw.githubusercontent.com/DIEGODOPAZO/Trabajo-TIC-II/gh-pages/imagenes/monkeyDluffy.jpg"  height = "200" /> 
-    <img id = "imagen2" src = "https://raw.githubusercontent.com/DIEGODOPAZO/Trabajo-TIC-II/gh-pages/imagenes/zoro.jpg" height = "200" /> 
-         </p>
-     <script src = "https://raw.githubusercontent.com/DIEGODOPAZO/Trabajo-TIC-II/gh-pages/scripts/cambioImagen.js"></script>
+   <script> 
+var img = {src:"", id:""};
+
+function cambiar(imagen) {
+    if(img.src=="" && img.id==""){
+        img.src=imagen.src;
+        img.id=imagen.id;
+    }
+    else{ 
+        var aux = imagen.src;
+
+        document.getElementById(imagen.id).src = img.src;
+        document.getElementById(img.id).src = aux;
+
+        img.src = ""; img.id="";
+    }
+} 
+</script>
+  
+   <body> 
+ <body>
+
+<img id="myImage1" src=".\images_ex2\01.jpg" alt="arte abstracto" onclick="cambiar(this)" name="canvi">  
+<img id="myImage2" src=".\images_ex2\02.jpg" alt="arte abstracto" onclick="cambiar(this)" name="canvi">  
+<img id="myImage3" src=".\images_ex2\03.jpg" alt="arte abstracto" onclick="cambiar(this)" name="canvi">  
+
+</body>
   </body>
 
 </html
